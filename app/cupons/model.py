@@ -6,7 +6,7 @@ from app.extensions import db
 # codigo_cupom => os cupons possuem codigos para poder inserir no carrinho de compras
 # valor_desconto => se o desconto é de 5%, 10% etc.
 # quantidade => quantidade de cupons disponíveis
-# categoria => se o cupom só é aplicável para determinadas marcas de automóveis ou se ele só é disponível em datas comemorativas, por exemplo, natal etc.
+# categoria => se o cupom só é disponível em datas comemorativas, por exemplo, natal etc.
 
 class Cupons(db.Model):
         __tablename__ = 'cupons'

@@ -3,13 +3,12 @@ from app.config import Config
 from app.extensions import db, migrate
 
 from app.usuario.model import Usuario
-from app.carros.model import Carros
+from app.novidades.model import Novidades
 from app.carrinho.model import Carrinho
-from app.carrosCarrinho.model import CarrosCarrinho
+from app.novidadesCarrinho.model import NovidadesCarrinho
 from app.cupons.model import Cupons
-from app.motos.model import Motos
-from app.motosCarrinho.model import MotosCarrinho
-from app.pedidos.model import Pedidos
+from app.produtos.model import Produtos
+from app.produtosCarrinho.model import ProdutosCarrinho
 
 # cria o app
 def create_app():
