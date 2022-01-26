@@ -20,7 +20,7 @@ class Cupons(db.Model):
         usuario_id = db.Column(db.Integer, db.ForeignKey('usuario.id'))
 
         # carrinho(one) <-> cupons(one)
-        carrinho = db.relationship("carrinho", back_populates="cupons", uselist=False)
+        carrinho = db.relationship("Carrinho", backref='Cupons', uselist=False)
 
          
         def json(self):
