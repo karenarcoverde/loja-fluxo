@@ -16,7 +16,7 @@ class Usuario(db.Model):
     cpf = db.Column(db.Integer, unique = True, nullable = False)
     email = db.Column(db.String(50), unique = True, nullable = False)
     telefone = db.Column(db.Integer, nullable = False)
-    endereço = db.Column(db.String(30), nullable = False)
+    endereco = db.Column(db.String(30), nullable = False)
 
     # carrinho(one) <-> usuario(one)
     carrinho = db.relationship("carrinho", back_populates="usuario", uselist=False)
@@ -30,5 +30,6 @@ class Usuario(db.Model):
                 'cpf':self.cpf,
                 'email':self.email,
                 'telefone':self.telefone,
-                'endereço':self.endereço
+                'endereco':self.endereco,
+                'carrinho_id':self.carrinho_id
             }

@@ -25,6 +25,9 @@ class Carrinho(db.Model):
 
         # produtos carrinho(many) <-> carrinho(one)
         produtos_carrinho = db.relationship('ProdutosCarrinho', backref = 'produtosCarrinho_carrinho')
+
+        # carrinho(one) <-> usuario(one)
+        usuario_id = db.Column(db.Integer, db.ForeignKey('usuario.id'))
        
         def json(self):
                 return{
