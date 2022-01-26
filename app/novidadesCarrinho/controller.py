@@ -20,5 +20,5 @@ class NovidadesCarrinhoDetalhes(MethodView):
             novidadecarrinho = NovidadesCarrinho(nome_novidade= nome_novidade, quantidade = quantidade, preco_unitario = preco_unitario, preco_total = preco_total)
             db.session.add(novidadecarrinho)
             db.session.commit()
-            return novidadecarrinho .json(),200
+            return novidadecarrinho.json(),200
         return {"code_status":"invalid data in request"},400

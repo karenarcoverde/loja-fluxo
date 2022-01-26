@@ -32,6 +32,7 @@ class Carrinho(db.Model):
        
         def json(self):
                 return{
+                'id':self.id,
                 'forma_pagamento':self.forma_pagamento,
                 'preco_frete':self.preco_frete,
                 'quantidade':self.quantidade,
