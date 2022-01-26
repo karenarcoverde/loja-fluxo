@@ -4,7 +4,8 @@ Quinta entrega para o processo PAME 21.2 da Fluxo Consultoria
 ## Funcionamento do programa:
 
 ###### **Usuário:** 
-Coloque IP/usuarios \ 
+Coloque IP/usuarios 
+\
 Por exemplo: http://127.0.0.1:5000/usuarios \
 Campos necessários para funcionar: \
 nome \
