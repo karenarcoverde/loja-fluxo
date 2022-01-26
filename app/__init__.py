@@ -13,6 +13,12 @@ from app.produtosCarrinho.model import ProdutosCarrinho
 
 # routes
 from app.usuario.routes import usuario_api
+from app.carrinho.routes import carrinho_api
+from app.cupons.routes import cupons_api
+from app.novidades.routes import novidades_api
+from app.produtos.routes import produtos_api
+from app.novidadesCarrinho.routes import novidadescarrinho_api
+from app.produtosCarrinho.routes import produtoscarrinho_api
 
 # cria o app
 def create_app():
@@ -28,5 +34,11 @@ def create_app():
 
     # rotas implementadas
     app.register_blueprint(usuario_api)
+    app.register_blueprint(carrinho_api)
+    app.register_blueprint(cupons_api)
+    app.register_blueprint(novidades_api)
+    app.register_blueprint(produtos_api)
+    app.register_blueprint(novidadescarrinho_api)
+    app.register_blueprint(produtoscarrinho_api)
 
     return app

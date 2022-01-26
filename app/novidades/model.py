@@ -13,7 +13,7 @@ from app.extensions import db
 class Novidades(db.Model):
         __tablename__ = 'novidades'
         id = db.Column(db.Integer, primary_key = True)
-        nome_produto = db.Column(db.String(20), nullable = False)
+        nome_novidade = db.Column(db.String(20), nullable = False)
         descricao = db.Column(db.String(50), nullable = False)
         preco = db.Column(db.Integer, nullable = False)
         validade = db.Column(db.Integer, nullable = False)
@@ -24,7 +24,7 @@ class Novidades(db.Model):
 
         def json(self):
                 return{
-                'nome_produto':self.nome_produto,
+                'nome_novidade':self.nome_novidade,
                 'descricao':self.descricao,
                 'preco':self.preco,
                 'validade':self.validade,

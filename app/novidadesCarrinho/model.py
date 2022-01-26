@@ -10,6 +10,7 @@ from app.extensions import db
 class NovidadesCarrinho(db.Model):
         __tablename__ = 'NovidadesCarrinho'
         id = db.Column(db.Integer, primary_key = True)
+        nome_novidade = db.Column(db.String(20), nullable = False)
         quantidade = db.Column(db.Integer, nullable = False)
         preco_total = db.Column(db.Integer, nullable = False)
 
@@ -21,6 +22,7 @@ class NovidadesCarrinho(db.Model):
 
         def json(self):
                 return{
+                'nome_novidade':self.nome_novidade,
                 'quantidade':self.quantidade,
                 'preco_total':self.preco_total
                 }
