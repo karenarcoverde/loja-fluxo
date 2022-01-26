@@ -63,7 +63,7 @@ Coloque IP/produtoscarrinho \
 Campos necessários para funcionar: \
 nome_produto (string, digite com "")\
 quantidade (int, digite sem "")\
-preco_unitario  (string, digite com "")
+preco_unitario  (int, digite sem "")
 
 
 
