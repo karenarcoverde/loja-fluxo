@@ -10,60 +10,60 @@ Coloque IP/usuarios
 \
 Por exemplo: http://127.0.0.1:5000/usuarios \
 Campos necessários para funcionar: \
-nome \
-cpf \
-email \
-telefone \
-endereco 
+nome (string, digite com "") \
+cpf  (string, digite com "") \
+email (string, digite com "") \
+telefone (string, digite com "")\
+endereco (string, digite com "")
 
 
 ###### **Carrinho:** 
 Coloque IP/carrinhos \
 Campos necessários para funcionar: \
-forma_pagamento \
-preco_frete \
-quantidade \
-preco_total 
+forma_pagamento (string, digite com "")\
+preco_frete (int, digite sem "")\
+quantidade (int, digite sem "")\
+preco_total (int, digite sem "")
 
 
 ###### **Cupons:** 
 Coloque IP/cupons \
 Campos necessários para funcionar: \
-codigo_cupom \
-valor_desconto \
-quantidade \
-categoria 
+codigo_cupom (int, digite sem "")\
+valor_desconto (int, digite sem "")\
+quantidade (int, digite sem "")\
+categoria (string, digite com "")
 
 ###### **Novidades:** 
 Coloque IP/novidades \
 Campos necessários para funcionar: \
-nome_novidade \
-descricao \
-preco \
-validade \
-data_lancamento 
+nome_novidade (string, digite com "")\
+descricao (string, digite com "")\
+preco (int, digite sem "")\
+validade (string, digite com "")\
+data_lancamento (string, digite com "")
 
 ###### **Novidades Carrinho:** 
 Coloque IP/novidadescarrinho \
 Campos necessários para funcionar: \
-nome_novidade \
-quantidade \
-preco_unitario  
+nome_novidade (string, digite com "")\
+quantidade (int, digite sem "")\
+preco_unitario  (int, digite sem "")
 
 ###### **Produtos:** 
 Coloque IP/produtos \
 Campos necessários para funcionar: \
-nome_produto \
-descricao \
-preco \
-validade 
+nome_produto (string, digite com "")\
+descricao (string, digite com "")\
+preco (int, digite sem "")\
+validade (string, digite com "")
 
 ###### **Produtos Carrinho:** 
 Coloque IP/produtoscarrinho \
 Campos necessários para funcionar: \
-nome_produto \
-quantidade \
-preco_unitario  
+nome_produto (string, digite com "")\
+quantidade (int, digite sem "")\
+preco_unitario  (string, digite com "")
 
 
 
