@@ -28,6 +28,5 @@ class Cupons(db.Model):
                 'codigo_cupom':self.codigo_cupom,
                 'valor_desconto':self.valor_desconto,
                 'quantidade':self.quantidade,
-                'categoria':self.categoria,
-                'usuario_id':self.usuario_id
+                'categoria':self.categoria
                 }

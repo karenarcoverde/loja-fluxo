@@ -12,10 +12,12 @@ class NovidadesCarrinhoDetalhes(MethodView):
         dados = request.json        
         nome_novidade = dados.get('nome_novidade')
         quantidade = dados.get('quantidade')
-        preco_total = dados.get('preco_total')
+        preco_unitario = dados.get('preco_unitario')
        
-        if isinstance (nome_novidade,str) and isinstance (quantidade,int) and isinstance (preco_total,int):
-            novidadecarrinho = NovidadesCarrinho(nome_novidade= nome_novidade, quantidade = quantidade, preco_total = preco_total)
+        preco_total = quantidade * preco_unitario
+       
+        if isinstance (nome_novidade,str) and isinstance (quantidade,int) and isinstance (preco_unitario,int) and isinstance (preco_total,int):
+            novidadecarrinho = NovidadesCarrinho(nome_novidade= nome_novidade, quantidade = quantidade, preco_unitario = preco_unitario, preco_total = preco_total)
             db.session.add(novidadecarrinho)
             db.session.commit()
             return novidadecarrinho .json(),200

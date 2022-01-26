@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 9da8adc0cafa
+Revision ID: a0c38fac58b7
 Revises: 
-Create Date: 2022-01-26 10:39:09.714638
+Create Date: 2022-01-26 11:18:02.696204
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '9da8adc0cafa'
+revision = 'a0c38fac58b7'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -72,6 +72,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('nome_novidade', sa.String(length=20), nullable=False),
     sa.Column('quantidade', sa.Integer(), nullable=False),
+    sa.Column('preco_unitario', sa.Integer(), nullable=False),
     sa.Column('preco_total', sa.Integer(), nullable=False),
     sa.Column('carrinho_id', sa.Integer(), nullable=True),
     sa.Column('novidades_id', sa.Integer(), nullable=True),
@@ -83,6 +84,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('nome_produto', sa.String(length=20), nullable=False),
     sa.Column('quantidade', sa.Integer(), nullable=False),
+    sa.Column('preco_unitario', sa.Integer(), nullable=False),
     sa.Column('preco_total', sa.Integer(), nullable=False),
     sa.Column('carrinho_id', sa.Integer(), nullable=True),
     sa.Column('produtos_id', sa.Integer(), nullable=True),

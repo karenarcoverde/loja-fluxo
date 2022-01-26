@@ -5,6 +5,7 @@ from app.extensions import db
 # tabela que contem as novidades colocadas no carrinho pelo usuário
 # id => chave primária
 # quantidade => quantidade de novidades colocadas no carrinho 
+# preco_unitario => preço de somente uma novidade colocada no carrinho
 # preco_total => preço total de todas as novidades colocadas 
 
 class NovidadesCarrinho(db.Model):
@@ -12,6 +13,7 @@ class NovidadesCarrinho(db.Model):
         id = db.Column(db.Integer, primary_key = True)
         nome_novidade = db.Column(db.String(20), nullable = False)
         quantidade = db.Column(db.Integer, nullable = False)
+        preco_unitario = db.Column(db.Integer, nullable = False)
         preco_total = db.Column(db.Integer, nullable = False)
 
         # novidades carrinho (many) <-> carrinho(one)
@@ -24,5 +26,6 @@ class NovidadesCarrinho(db.Model):
                 return{
                 'nome_novidade':self.nome_novidade,
                 'quantidade':self.quantidade,
+                'preco_unitario':self.preco_unitario,
                 'preco_total':self.preco_total
                 }
