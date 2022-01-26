@@ -12,7 +12,7 @@ nome \
 cpf \
 email \
 telefone \
-endereco \
+endereco 
 
 
 ###### **Carrinho:** 
@@ -21,7 +21,7 @@ Campos necessários para funcionar: \
 forma_pagamento \
 preco_frete \
 quantidade \
-preco_total \
+preco_total 
 
 
 ###### **Cupons:** 
@@ -30,7 +30,7 @@ Campos necessários para funcionar: \
 codigo_cupom \
 valor_desconto \
 quantidade \
-categoria \
+categoria 
 
 ###### **Novidades:** 
 Coloque IP/novidades \
@@ -39,14 +39,14 @@ nome_novidade \
 descricao \
 preco \
 validade \
-data_lancamento \
+data_lancamento 
 
 ###### **Novidades Carrinho:** 
 Coloque IP/novidadescarrinho \
 Campos necessários para funcionar: \
 nome_novidade \
 quantidade \
-preco_unitario  \
+preco_unitario  
 
 ###### **Produtos:** 
 Coloque IP/produtos \
@@ -54,14 +54,14 @@ Campos necessários para funcionar: \
 nome_produto \
 descricao \
 preco \
-validade \
+validade 
 
 ###### **Produtos Carrinho:** 
 Coloque IP/produtoscarrinho \
 Campos necessários para funcionar: \
 nome_produto \
 quantidade \
-preco_unitario  \
+preco_unitario  
 
 
 
