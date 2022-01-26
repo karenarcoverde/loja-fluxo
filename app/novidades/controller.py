@@ -17,7 +17,7 @@ class NovidadesDetalhes(MethodView):
         data_lancamento = dados.get('data_lancamento')
 
 
-        if isinstance (nome_novidade,str) and isinstance (descricao,str) and isinstance (preco,int) and isinstance (validade,int) and isinstance (data_lancamento,int):
+        if isinstance (nome_novidade,str) and isinstance (descricao,str) and isinstance (preco,int) and isinstance (validade,str) and isinstance (data_lancamento,str):
             novidade = Novidades(nome_novidade= nome_novidade, descricao = descricao, preco = preco, validade = validade, data_lancamento = data_lancamento )
             db.session.add(novidade)
             db.session.commit()

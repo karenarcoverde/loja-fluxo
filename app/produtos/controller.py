@@ -15,7 +15,7 @@ class ProdutosDetalhes(MethodView):
         preco = dados.get('preco')
         validade = dados.get('validade')
 
-        if isinstance (nome_produto,str) and isinstance (descricao,str) and isinstance (preco,int) and isinstance (validade,int):
+        if isinstance (nome_produto,str) and isinstance (descricao,str) and isinstance (preco,int) and isinstance (validade,str):
             produto = Produtos(nome_produto= nome_produto, descricao = descricao, preco = preco, validade = validade)
             db.session.add(produto)
             db.session.commit()

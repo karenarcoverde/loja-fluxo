@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: f9edadfda7df
+Revision ID: 9da8adc0cafa
 Revises: 
-Create Date: 2022-01-26 10:22:08.769279
+Create Date: 2022-01-26 10:39:09.714638
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'f9edadfda7df'
+revision = '9da8adc0cafa'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -23,8 +23,8 @@ def upgrade():
     sa.Column('nome_novidade', sa.String(length=20), nullable=False),
     sa.Column('descricao', sa.String(length=50), nullable=False),
     sa.Column('preco', sa.Integer(), nullable=False),
-    sa.Column('validade', sa.Integer(), nullable=False),
-    sa.Column('data_lancamento', sa.Integer(), nullable=False),
+    sa.Column('validade', sa.String(length=10), nullable=False),
+    sa.Column('data_lancamento', sa.String(length=10), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('produtos',
@@ -32,7 +32,7 @@ def upgrade():
     sa.Column('nome_produto', sa.String(length=20), nullable=False),
     sa.Column('descricao', sa.String(length=50), nullable=False),
     sa.Column('preco', sa.Integer(), nullable=False),
-    sa.Column('validade', sa.Integer(), nullable=False),
+    sa.Column('validade', sa.String(length=10), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('usuario',

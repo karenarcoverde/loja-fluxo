@@ -16,8 +16,8 @@ class Novidades(db.Model):
         nome_novidade = db.Column(db.String(20), nullable = False)
         descricao = db.Column(db.String(50), nullable = False)
         preco = db.Column(db.Integer, nullable = False)
-        validade = db.Column(db.Integer, nullable = False)
-        data_lancamento = db.Column(db.Integer, nullable = False)
+        validade = db.Column(db.String(10), nullable = False)
+        data_lancamento = db.Column(db.String(10), nullable = False)
 
         # novidades(one) <-> novidades carrinho(many)
         novidades_carrinho = db.relationship('NovidadesCarrinho', backref = 'novidadesCarrinho')

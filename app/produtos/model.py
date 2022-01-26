@@ -14,7 +14,7 @@ class Produtos(db.Model):
         nome_produto = db.Column(db.String(20), nullable = False)
         descricao = db.Column(db.String(50), nullable = False)
         preco = db.Column(db.Integer, nullable = False)
-        validade = db.Column(db.Integer, nullable = False)
+        validade = db.Column(db.String(10), nullable = False)
 
         # produtos(one) <-> produtos carrinho(many)
         produtos_carrinho = db.relationship('ProdutosCarrinho', backref = 'produtosCarrinho')
