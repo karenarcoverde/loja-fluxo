@@ -22,3 +22,48 @@ class CuponsDetalhes(MethodView):
             db.session.commit()
             return cupom.json(),200
         return {"code_status":"invalid data in request"},400
+
+class CuponsId(MethodView):
+    def get (self,id):
+        cupom = Cupons.query.get_or_404(id)
+        return cupom.json()
+
+    def put (self,id):
+        dados = request.json
+        codigo_cupom = dados.get('codigo_cupom')
+        valor_desconto = dados.get('valor_desconto')
+        quantidade = dados.get('quantidade')
+        categoria = dados.get('categoria')
+
+        cupom = Cupons.query.get_or_404(id)
+        cupom.codigo_cupom = codigo_cupom
+        cupom.valor_desconto = valor_desconto
+        cupom.quantidade = quantidade
+        cupom.categoria = categoria
+        db.session.commit()
+        return cupom.json(),200
+      
+
+    def patch (self,id):
+        dados = request.json
+        cupom = Cupons.query.get_or_404 (id)
+  
+        codigo_cupom = dados.get('codigo_cupom',Cupons.codigo_cupom)
+        valor_desconto = dados.get('valor_desconto', Cupons.valor_desconto)
+        quantidade = dados.get('quantidade',Cupons.quantidade)
+        categoria = dados.get('categoria',Cupons.categoria)
+
+        cupom.codigo_cupom = codigo_cupom
+        cupom.valor_desconto = valor_desconto
+        cupom.quantidade = quantidade
+        cupom.categoria = categoria
+        db.session.commit()
+        return cupom.json(),200
+    
+
+    def delete(self,id):
+        cupom = Cupons.query.get_or_404(id)
+        db.session.delete (cupom)
+        db.session.commit ()
+        return {"code_status":"deletado"},200
+

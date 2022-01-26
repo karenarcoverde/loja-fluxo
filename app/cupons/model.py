@@ -25,6 +25,7 @@ class Cupons(db.Model):
          
         def json(self):
                 return{
+                'id':self.id,
                 'codigo_cupom':self.codigo_cupom,
                 'valor_desconto':self.valor_desconto,
                 'quantidade':self.quantidade,

@@ -24,6 +24,7 @@ class Novidades(db.Model):
 
         def json(self):
                 return{
+                'id':self.id,
                 'nome_novidade':self.nome_novidade,
                 'descricao':self.descricao,
                 'preco':self.preco,

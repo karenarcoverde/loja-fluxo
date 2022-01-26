@@ -18,7 +18,6 @@ class Carrinho(db.Model):
 
         # carrinho(one) <-> cupons(one)
         cupons_id = db.Column(db.Integer, db.ForeignKey('cupons.id'))
-        carrinho = db.relationship('Cupons', backref='Carrinho')
 
         # novidades carrinho(many) <-> carrinho(one)
         novidades_carrinho = db.relationship('NovidadesCarrinho', backref = 'novidadesCarrinho_carrinho')
@@ -28,7 +27,6 @@ class Carrinho(db.Model):
 
         # carrinho(one) <-> usuario(one)
         usuario_id = db.Column(db.Integer, db.ForeignKey('usuario.id'))
-        usuario = db.relationship('Usuario', backref='Carrinho')
        
         def json(self):
                 return{

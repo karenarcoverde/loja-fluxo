@@ -21,3 +21,51 @@ class ProdutosDetalhes(MethodView):
             db.session.commit()
             return produto.json(),200
         return {"code_status":"invalid data in request"},400
+
+class ProdutosId(MethodView):
+    def get (self,id):
+        produto = Produtos.query.get_or_404(id)
+        return produto.json()
+
+    def put (self,id):
+        dados = request.json
+        nome_produto = dados.get('nome_produto')
+        descricao = dados.get('descricao')
+        preco = dados.get('preco')
+        validade = dados.get('validade')
+
+
+        produto = Produtos.query.get_or_404(id)
+        produto.nome_novidade = nome_produto
+        produto.descricao = descricao
+        produto.preco = preco
+        produto.validade = validade
+
+        db.session.commit()
+        return produto.json(),200
+      
+
+    def patch (self,id):
+        dados = request.json
+        produto= Produtos.query.get_or_404 (id)
+  
+        nome_produto= dados.get('nome_produto',Produtos.nome_produto)
+        descricao = dados.get('descricao', Produtos.descricao)
+        preco = dados.get('preco',Produtos.preco)
+        validade = dados.get('validade',Produtos.validade)
+
+        produto.nome_produto = nome_produto
+        produto.descricao = descricao
+        produto.preco = preco
+        produto.validade = validade
+    
+        db.session.commit()
+        return produto.json(),200
+    
+
+    def delete(self,id):
+        produto = Produtos.query.get_or_404(id)
+        db.session.delete (produto)
+        db.session.commit ()
+        return {"code_status":"deletado"},200
+
