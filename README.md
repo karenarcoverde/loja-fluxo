@@ -14,7 +14,8 @@ nome (string, digite com "") \
 cpf  (string, digite com "") \
 email (string, digite com "") \
 telefone (string, digite com "")\
-endereco (string, digite com "")
+endereco (string, digite com "") \
+senha (string, digite com "") 
 
 
 ###### **Carrinho:** 
