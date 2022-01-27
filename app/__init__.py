@@ -1,6 +1,6 @@
 from flask import Flask
 from app.config import Config
-from app.extensions import db, migrate
+from app.extensions import db, migrate, mail, jwt
 
 # models
 from app.usuario.model import Usuario
@@ -31,6 +31,8 @@ def create_app():
     # inicializacao da database
     db.init_app(app)
     migrate.init_app(app,db)
+    mail.init_app(app)
+    jwt.init_app(app)
 
     # rotas implementadas
     app.register_blueprint(usuario_api)
