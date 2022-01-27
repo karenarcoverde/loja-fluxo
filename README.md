@@ -1,5 +1,5 @@
 # loja-fluxo
-Quinta entrega para o processo PAME 21.2 da Fluxo Consultoria
+Quinta e Sexta entregas para o processo PAME 21.2 da Fluxo Consultoria
 
 ## Funcionamento do programa:
 Todos as tabelas possuem post e get. Caso acesse o id (http://127.0.0.1:5000/usuarios/1 por exemplo) terão get, put, patch e delete. \
